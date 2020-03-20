@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>修改个人信息</title>
+  <!-- Semantic-UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <!-- Markdown -->
+  <link rel="stylesheet" href="/lib/editormd/css/editormd.min.css">
+  <link rel="stylesheet" href="/css/typo.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/lib/prism/prism.css">
+  <link rel="stylesheet" href="/lib/tocbot/tocbot.css">
+  <link rel="stylesheet" href="/css/me.css">
+</head>
+<body>
+
+  <!--导航-->
+  <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+  <div class="ui container">
+    <div class="ui inverted secondary stackable menu">
+      <h2 class="ui teal header item">管理后台</h2>
+      <a href="/admin/blogs" class="m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
+      <a href="/admin/types" class=" m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+      <a href="/admin/tags" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+      <!--<a href="#" th:href="@{/admin/videos}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="mini tags icon"></i>视频</a>-->
+      <a href="/admin/refresh" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>刷新缓存</a>
+      <a href="/register" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>注册</a>
+      <a href="/admin/change" class="m-item item m-mobile-hide active"><i class="mini tags icon"></i>修改个人信息</a>
+      <div class="right m-item m-mobile-hide menu">
+        <div class="ui dropdown  item">
+          <div class="text">
+            <img class="ui avatar image" src="">
+            <span>bobcao</span>
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="/admin/logout" class="item">注销</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+    <i class="sidebar icon"></i>
+  </a>
+</nav>
+
+  <div class="ui attached pointing menu">
+    <div class="ui container">
+      <div class="right menu">
+        <a href="/admin/change" class="teal active item">修改个人信息</a>
+      </div>
+    </div>
+  </div>
+
+  <!--中间内容-->
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+      <form action="/admin/change" method="post" class="ui form">
+        <input type="hidden" name="id" value="1003">
+        <div class="required field">
+          <div class="ui left labeled input">
+            <label class="ui teal basic label">用户名</label>
+            <input type="text"  required name="nickname" placeholder="用户名可以中文" value="bobcao">
+            <label class="ui teal basic label">登录名</label>
+            <input type="text" required  disabled name="username" placeholder="不能带中文和特殊字符" value="bobcao">
+
+          </div>
+        </br>
+        </br>
+          <div class="ui left labeled input">
+            <label class="ui teal basic label">邮箱</label>
+            <input type="text" required name="email" placeholder="用户名可以中文" value="bobcaoge@outlook.com">
+
+            <label class="ui teal basic label">密码</label>
+            <input type="password" required name="password" placeholder="密码" value="">
+          </div>
+        </div>
+
+        <div class="ui error message"></div>
+
+        
+       
+        
+        <div class="ui right aligned container">
+          <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+          <button class="ui teal submit button">添加用户</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--底部footer-->
+  <footer class="ui inverted vertical segment m-padded-tb-massive">
+  <div class="ui center aligned container">
+    <div class="ui inverted divided stackable grid">
+      <div class="three wide column">
+        <div class="ui inverted link list">
+          <div class="item">
+            <img src="/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px">
+          </div>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-text-thin">Email：neuq_hcg@163.com</a>
+          <a href="#" class="item m-text-thin">QQ：1693524836</a>
+        </div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+      </div>
+    </div>
+    <div class="ui inverted section divider"></div>
+    <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2018 Designed by 希尤丨彦</p>
+  </div>
+
+</footer>
+
+  <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?05ad68910d5503f11833c31caf579be6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="/lib/prism/prism.js"></script>
+  <script src="/lib/tocbot/tocbot.min.js"></script>
+  <script src="/lib/qrcode/qrcode.min.js"></script>
+  <script src="/lib/waypoints/jquery.waypoints.min.js"></script>
+
+
+  <script>
+
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+
+    $('.ui.form').form({
+      fields : {
+        title : {
+          identifier: 'username',
+          rules: [{
+            type : 'empty',
+            prompt: '请输入登陆名',
+              rangelength: [4, 10],
+              regex: /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{4,10}$/
+          }]
+        },
+          nickname: {
+              identifier: 'nickname',
+              rules: [
+                  {
+                      type   : 'empty',
+                      prompt : '请输入用户名'
+                  }
+              ]
+          },
+          password: {
+              identifier: 'password',
+              rules: [
+                  {
+                      type   : 'empty',
+                      prompt : 'Please enter a password'
+                  },
+                  {
+                      type   : 'minLength[4]',
+                      prompt : 'Your password must be at least {ruleValue} characters'
+                  }
+              ]
+          }
+      }
+    });
+
+  </script>
+</body>
+</html>

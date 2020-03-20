@@ -1,0 +1,23 @@
+urllib2下最简单的请求发送
+urllib2下包含headers的get请求发送
+urllib2和urllib下包含headers的post请求发送
+urllib2的代理使用
+
+
+
+requests下的get请求发送
+requests下的post请求发送
+requests下response的相关属性
+requests下的代理使用
+
+常用响应解析工具re lxml beautifulsoup4
+re速度快,但是不够精准,容易误伤
+bs4速度慢，但是足够准确,效率低
+lxml速度介于re和bs4之间，准确度也能满足需求，常用lxml, 需结合xpath工具，以便于精准的定位数据
+
+
+scrapy框架
+scrapy数据处理结构，从请求的构造，中间的代理，然后发送，到数据的处理，链接的获取，到最后所有的数据存储
+scrapy的常用模板，类
+
+动态数据抓取所应该注意的地方

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客管理</title>
+  <!-- Semantic-UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <!-- Markdown -->
+  <link rel="stylesheet" href="/lib/editormd/css/editormd.min.css;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+  <link rel="stylesheet" href="/css/typo.css;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+  <link rel="stylesheet" href="/css/animate.css;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+  <link rel="stylesheet" href="/lib/prism/prism.css;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+  <link rel="stylesheet" href="/lib/tocbot/tocbot.css;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+  <link rel="stylesheet" href="/css/me.css;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+</head>
+<body>
+
+  <!--导航-->
+  <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+  <div class="ui container">
+    <div class="ui inverted secondary stackable menu">
+      <h2 class="ui teal header item">管理后台</h2>
+      <a href="/admin/blogs;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
+      <a href="/admin/types;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class=" m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
+      <a href="/admin/tags;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
+      <!--<a href="#" th:href="@{/admin/videos}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="mini tags icon"></i>视频</a>-->
+      <a href="/admin/refresh;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>刷新缓存</a>
+      <a href="/register;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>注册</a>
+      <a href="/admin/change;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>修改个人信息</a>
+      <div class="right m-item m-mobile-hide menu">
+        <div class="ui dropdown  item">
+          <div class="text">
+            <img class="ui avatar image" src="http://hiiumaa.club:8088/admin/;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6">
+            <span>bobcao</span>
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a href="/admin/logout;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="item">注销</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+    <i class="sidebar icon"></i>
+  </a>
+</nav>
+
+
+  <!--中间内容-->
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+      <div class="ui success large  message">
+        <h3>Hi, 爱沙尼亚  希尤丨彦</h3>
+        <p>欢迎来到德玛西亚！</p>
+      </div>
+      <img src="/images/2.jpg;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" alt="" class="ui rounded bordered fluid image">
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!--底部footer-->
+  <footer class="ui inverted vertical segment m-padded-tb-massive">
+  <div class="ui center aligned container">
+    <div class="ui inverted divided stackable grid">
+      <div class="three wide column">
+        <div class="ui inverted link list">
+          <div class="item">
+            <img src="/images/wechat.jpg;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6" class="ui rounded image" alt="" style="width: 110px">
+          </div>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+          <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+        <div class="ui inverted link list">
+          <a href="#" class="item m-text-thin">Email：neuq_hcg@163.com</a>
+          <a href="#" class="item m-text-thin">QQ：1693524836</a>
+        </div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+      </div>
+    </div>
+    <div class="ui inverted section divider"></div>
+    <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2018 Designed by 希尤丨彦</p>
+  </div>
+
+</footer>
+
+
+  <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?05ad68910d5503f11833c31caf579be6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="/lib/prism/prism.js;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6"></script>
+  <script src="/lib/tocbot/tocbot.min.js;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6"></script>
+  <script src="/lib/qrcode/qrcode.min.js;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6"></script>
+  <script src="/lib/waypoints/jquery.waypoints.min.js;jsessionid=BBAB8A5CF721B0D4424CDECC188061C6"></script>
+
+
+  <script>
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+
+  </script>
+</body>
+</html>

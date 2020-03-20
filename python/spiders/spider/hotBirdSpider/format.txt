@@ -1,0 +1,5 @@
+获取每一页的链接
+ //tbody[contains(id, normal)]//span//a[contains(class, xst)]//@href   thread-1566668-1-1.html
+
+获取每页中的图片链接
+//tbody/tr/td[contains(class, t_msgfont)]/img[contains(onload, th)]//@src

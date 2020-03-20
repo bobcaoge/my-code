@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <title>企业客户登录|微播易企业客户推广平台</title>
+    <meta name="keywords" content="微博推广，微信推广，朋友圈推广，短视频推广，网红直播推广">
+    <meta name="description" content="微播易汇聚了微博、微信、朋友圈、短视频、网红直播等在内的超80万优质自媒体账号资源，多、快、好、省的帮助业界完成75万起社媒营销活动">
+    <!-- header_js_css start -->
+
+<script type="text/javascript" src="http://resources.weiboyi.com/js/lib/tingyun/tingyun-rum.js"></script>
+<link rel="stylesheet" type="text/css" href="/style/lib/cmp_all.css?v=2016032317" />
+
+
+<link rel="stylesheet" type="text/css" href="http://resources.weiboyi.com/style/lib/calendar/jscal2.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://resources.weiboyi.com/js/lib/seajs/sea.js"></script>
+<script type="text/javascript" src="http://resources.weiboyi.com/js/lib/seajs/config.js?v=bc79ea404e1c5b2bb163943d8f1d8f5a"></script>
+<script type="text/javascript" src="http://resources.weiboyi.com/js/lib/jquery/1.8.2/jquery_min.js"></script>
+<script type="text/javascript">
+    seajs.config({
+        paths: {
+            doc: '/js/module/document',
+            module: '/js/module',
+            'module_common': 'http://resources.weiboyi.com/js/module_common',
+            lib: 'http://resources.weiboyi.com/js/lib'
+        },
+        base: '/js/module/',
+        charset: 'utf-8',
+        alias: {
+            ueditor: '/js/lib/ueditor/1.4.3/ueditor_cmd.js?v=20160323'
+        },
+        map: [
+            [/(.*\/js\/module_common\/.*\.(?:css|js|tpl))(?:.*)$/i, '$1?' + 'cde0b0edcfdc8b2df09e51f34ace78e8'],
+            [/\/config4js\/\?key=(.*)/i, '/hwauth/config4js/?key=$1']
+        ]
+    });
+
+    var doT, Weiboyi, W;
+    seajs.on('exec', function(data) {
+        if (data.uri === seajs.resolve('weiboyi')) {
+            Weiboyi = W = data.exports;
+            W.setDefaultOpts("window", {
+                defaultBtnType: "important"
+            });
+        } else if (data.uri === seajs.resolve('doT')) {
+            doT = data.exports;
+        } else if (data.uri===seajs.resolve('plupload')){
+            $.pluploadOpts.url = "http://upload.weiboyi.com/upload/upload/";
+            $.pluploadOpts.viewBasePath = "http://img.weiboyi.com";
+        }
+    });
+</script>
+
+<link rel="stylesheet" href="/style/module/pages_built.css?v=0765ba12ef2c9ee6f882ec46fcce7326"/>
+<link rel="stylesheet" href="http://resources.weiboyi.com/style/module_common/all_built.css?v=246454c763c97fbaf146147d5fc09b2f"/>
+<script type="text/javascript" src="http://resources.weiboyi.com/js/build/lib.js?v=0441c6b4af5e141398e6fb4c496be984"></script>
+<script type="text/javascript" src="/js/build/module.js?v=66297ed28e44a367874b876f58b26eea"></script>
+<script type="text/javascript" src="http://resources.weiboyi.com/js/build/module.js?v=cde0b0edcfdc8b2df09e51f34ace78e8"></script>
+
+<script>
+    seajs.config({
+        preload: ['doT', 'csrf', 'cookie', 'rest', 'blockUI', 'calendar', 'form', 'weiboyi', 'plupload', 'image_scale']
+    });
+    $.each(['doT', 'csrf', 'cookie', 'rest', 'blockUI', 'calendar', 'form', 'weiboyi', 'image_scale'], function(index, id) {
+        seajs.execImmediateInCache(id);
+    });
+</script>
+<script type="text/javascript" src="/js/public.js"></script>
+<!-- header_js_css end -->
+
+</head>
+<body>
+    <div class="login_screen login_logo">
+        <a href="http://www.weiboyi.com" target="_blank">
+                        <img src="/resources/images/logo/login_logo_v3_2x.png" height="48px">
+        </a>
+        <a class="header_link" href="/hwranklist/wechat?spm=1.2.4.1.18.0" target="_blank">微信公众号TOP榜</a>
+        <a class="header_link" href="/hwranklist/live?spm=1.2.4.1.4.0" target="_blank">直播达人TOP榜</a>
+    </div>
+    <div id="imagebox">
+        <ul class="login_banner_list">
+            <li class="wechat_rank_banner">
+                <div class="login_banner_container">
+                    <a target="_blank" href="/hwranklist/wechat?spm=1.2.4.1.22.0">
+                    </a>
+                </div>
+            </li>
+            <li class="zhibo_rank_banner">
+                <div class="login_banner_container">
+                    <a target="_blank" href="/hwranklist/live?spm=1.2.4.1.3.0">
+                        <img src="/resources/images/banner/login_zhibo_v2.jpg" width="875"/>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="relative">
+            <div class="login_screen clearfix relative">
+                <div class="login_form fr" id="loginform">
+                    <h1 class="login_title web-font">广告主登录</h1>
+                    <div class="clearfix">
+                        <div class="login_name_container relative">
+                            <a href="javascript:void(0);" class="btn_small_delete weiboyiGrid_btn button js_username"></a>
+                            <div class="login_name_content">
+                                <label>
+                                    <em>用户名</em><input type="text" id="username" name="username" maxlength="60"/>
+
+                                </label>
+
+                            </div>
+                        </div>
+                        <p class="error"></p>
+                    </div>
+                    <div class="clearfix">
+                        <div class="login_name_container relative">
+                            <div class="login_psw_content">
+                                <label><em>密码</em><input type="password" id="password" name="password" maxlength="32"  /></label>
+                            </div>
+                        </div>
+                        <p class="error"></p>
+                    </div>
+                    <div class="clearfix">
+                        <div class="login_captcha_container fl relative">
+                            <div class="login_captcha_content">
+                                <label><em>验证码</em><input type="text" id="piccode" name="piccode" maxlength="4" /></label>
+                            </div>
+                        </div>
+                        <div class="fl captcha_wrap relative">
+                            <img src="" id="captcha" class="captcha fl"/>
+                            <a href="javascript:;" class="font_size_small" id="reload">换一张？</a>
+                        </div>
+                        <p class="error picCodeError"></p>
+                    </div>
+
+                    <label class="rememberUsername">
+                        <input type="checkbox" id="remember-password" name="remember-password" >记住用户名
+                    </label>
+                    <p>
+                        <input type="hidden" value="1" name="mode" id="login-mode"/>
+                        <input type="hidden" name='typelogin' id='typelogin' value=1/>
+                        <a href="javascript:;" class="button btn_large_important btn_login" id="login-submit"><span class="btn_wrap">登录</span></a>
+                    </p>
+                    <p class="fr">
+                                                                        <a href="/hwauth/lost/index/">忘记密码？</a>
+                                                                        <a href="/hwauth/reactivate" target="_blank">账户激活</a>
+                                                                        <a class='register_btn' href="javascript:;">注册账号</a>
+                                            </p>
+                </div>
+            </div>
+            <!--banner轮播-->
+
+        </div>
+        </div>
+
+    <div class="login_screen login_footer">
+        版权所有  ©  北京微播易科技股份有限公司 2011-<em class="js_thisYear"></em>.&nbsp;&nbsp;京ICP证：130126号.&nbsp;&nbsp;京ICP备：09047853号.<br/>
+        北京市公安局朝阳分局网监中心备案编号：11010502023471.  商标注册证：13594954号. 13594767号.
+    </div>
+    <!--登录页面用户名未激活提示框-->
+    <div class="re_mail_box1" style="position:absolute;width:544px;display:none" id="activateTip">
+        <div class="re_mail_box_in">
+            <span class="clo_se"><a href="javascript:void(0)" id="closeTip">×</a></span>
+
+            <div class="mail_ts" style="width:480px;background:url(img/sim.jpg) no-repeat 5px center;color:#333;">
+                您的账号还未激活，无法登录，赶紧去邮箱激活吧！<a href="javascript:;" class="succ_blue" id="toEmail" jump="">去邮箱激活！</a></div>
+        </div>
+    </div>
+<!--登录页面用户名未激活提示框-->
+<script type='text/javascript'>
+    var emailLoginHost = {"@qq.com":"https:\/\/mail.qq.com\/cgi-bin\/loginpage","@126.com":"http:\/\/www.126.com\/","@163.com":"http:\/\/mail.163.com\/","@yeah.net":"http:\/\/www.yeah.net\/","@sohu.com":"http:\/\/mail.sohu.com\/","@sina.com":"http:\/\/mail.sina.com.cn\/?err=50102","@yahoo.cn":"http:\/\/mail.cn.yahoo.com\/","@yahoo.com.cn":"http:\/\/mail.cn.yahoo.com\/","@tom.com":"http:\/\/mail.tom.com\/","@gmail.com":"https:\/\/accounts.google.com\/ServiceLogin?service=mail&passive=true&rm=false&continue=http:\/\/mail.goo","@hotmail.com":"http:\/\/www.hotmail.com\/","@live.com":"http:\/\/www.hotmail.com\/","@live.cn":"http:\/\/www.hotmail.com\/","@139.com":"http:\/\/mail.10086.cn\/","@189.cn":"http:\/\/webmail1.189.cn\/webmail\/","@wo.com.cn":"http:\/\/mail.wo.com.cn\/mail\/login.action","@21cn.com":"http:\/\/mail.21cn.com\/","@net263.com":"http:\/\/www.263.net\/","@foxmail.com":"http:\/\/mail.qq.com\/cgi-bin\/loginpage?t=fox_loginpage&sid=,2,zh_CN&r=482c681c5e6967034c640285b68fe07c","@vip.qq.com":"https:\/\/mail.qq.com\/cgi-bin\/loginpage"};
+    $(function () {
+        $('#toEmail').click(function () {
+            var href = $(this).attr('jump');
+            if (emailLoginHost[href]) {
+                window.open(emailLoginHost[href]);
+            } else {
+                window.open('');
+            }
+        });
+        //点击转端链接广告自动跳转到用户名登陆input框中
+        $("#shortAd").click(function () {
+            $.unblockUI();
+            $("#username").focus();
+        })
+    });
+
+    seajs.use(['module/auth/index.js',
+       'module/auth/imagebox.js'
+        ],
+        function(auth, imagebox) {
+        imagebox.init();
+        imagebox.start();
+    });
+    seajs.use('/js/module/layout/navigation.js');
+
+    appendSpmAndKidToRegisterUrl();
+
+    function appendSpmAndKidToRegisterUrl() {
+        var spm = $.cookie('spm') || '';
+        var kid = $.cookie('kid') || '';
+        $('.register_btn').click(function () {
+            window.location = '/hwauth/register?spm=' + spm + '&kid=' + kid;
+        });
+    }
+</script>
+    <script>
+        seajs.use('module/layout/bottom_this_year.js');
+    </script>
+<!-- Gridsum tracking code begin. -->
+<script type='text/javascript'>
+    (function () {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = (location.protocol == 'https:' ? 'https://ssl.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002319-76AA56/gs.js';
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(s, firstScript);
+    })();
+</script>
+<!--Gridsum tracking code end. -->
+</body>
+</html>

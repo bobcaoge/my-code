@@ -1,0 +1,8 @@
+Mon May 13 13:32:34 2019:
+    failed to send email from emailForProgram@163.com to 378082326@qq.com (554, b'DT:SPM 163 smtp8,DMCowADHZoNrAdlchZhcDg--.16433S2 1557725548,please see http://mail.163.com/help/help_spam_16.htm?ip=222.171.7.93&hostid=smtp8&time=1557725548')
+Mon May 13 13:32:34 2019:
+    failed to send email from emailForProgram@163.com to 378082326@qq.com (554, b'DT:SPM 163 smtp8,DMCowADHZoNrAdlchZhcDg--.16433S2 1557725548,please see http://mail.163.com/help/help_spam_16.htm?ip=222.171.7.93&hostid=smtp8&time=1557725548')
+Mon May 13 13:34:45 2019:
+    failed to send email from emailForProgram@163.com to 378082326@qq.com (554, b'DT:SPM 163 smtp8,DMCowADHtTbuAdlclNZcDg--.18926S2 1557725679,please see http://mail.163.com/help/help_spam_16.htm?ip=222.171.7.93&hostid=smtp8&time=1557725679')
+Mon May 13 13:34:45 2019:
+    failed to send email from emailForProgram@163.com to 378082326@qq.com (554, b'DT:SPM 163 smtp8,DMCowADHtTbuAdlclNZcDg--.18926S2 1557725679,please see http://mail.163.com/help/help_spam_16.htm?ip=222.171.7.93&hostid=smtp8&time=1557725679')

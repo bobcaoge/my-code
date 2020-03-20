@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E56B52CA-CF30-4F5E-A5AD-869E8A792D95}</ProjectGuid>
+    <RootNamespace>LeetCode</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Solution.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="1010_Pairs_of_Songs_With_Total_Durations_Divisible_by_60.cpp" />
+    <ClCompile Include="1013_Partition_Array_Into_Three_Parts_With_Equal_Sum.cpp" />
+    <ClCompile Include="1018_Binary_Prefix_Divisible_By_5.cpp" />
+    <ClCompile Include="1022_Sum_of_Root_To_Leaf_Binary_Numbers.cpp" />
+    <ClCompile Include="1025_Divisor_Game.cpp" />
+    <ClCompile Include="1030_Matrix_Cells_in_Distance_Order.cpp" />
+    <ClCompile Include="1033_Moving_Stones_Until_Consecutive.cpp" />
+    <ClCompile Include="1037_Valid_Boomerang.cpp" />
+    <ClCompile Include="1042_Flower_Planting_With_No_Adjacent.cpp" />
+    <ClCompile Include="1046_Last_Stone_Weight.cpp" />
+    <ClCompile Include="1047_Remove_All_Adjacent_Duplicates_In_String.cpp" />
+    <ClCompile Include="1051_Height_Checker.cpp" />
+    <ClCompile Include="1071_Greatest_Common_Divisor_of_Strings.cpp" />
+    <ClCompile Include="1078_Occurrences_After_Bigram.cpp" />
+    <ClCompile Include="1089_Duplicate_Zeros.cpp" />
+    <ClCompile Include="1103_Distribute_Candies_to_People.cpp" />
+    <ClCompile Include="1108_Defanging_an_IP_Address.cpp" />
+    <ClCompile Include="1122_Relative_Sort_Array.cpp" />
+    <ClCompile Include="1128_Number_of_Equivalent_Domino_Pairs.cpp" />
+    <ClCompile Include="1137_N-th_Tribonacci_Number.cpp" />
+    <ClCompile Include="1154_Day_of_the_Year.cpp" />
+    <ClCompile Include="1160_Find_Words_That_Can_Be_Formed_by_Characters.cpp" />
+    <ClCompile Include="1170_Compare_Strings_by_Frequency_of_the_Smallest_Character.cpp" />
+    <ClCompile Include="1175_Prime_Arrangements.cpp" />
+    <ClCompile Include="1176_Diet_Plan_Performance.cpp" />
+    <ClCompile Include="146_LRU_Cache.cpp" />
+    <ClCompile Include="207_Course_Schedule.cpp" />
+    <ClCompile Include="2_Add_Two_Numbers.cpp" />
+    <ClCompile Include="310_Minimum_Height_Trees.cpp" />
+    <ClCompile Include="332_Reconstruct_Itinerary.cpp" />
+    <ClCompile Include="417_Pacific_Atlantic_Water_Flow.cpp" />
+    <ClCompile Include="419_Battleships_in_a_Board.cpp" />
+    <ClCompile Include="423_Reconstruct_Original_Digits_from_English.cpp" />
+    <ClCompile Include="424_Longest_Repeating_Character_Replacement.cpp" />
+    <ClCompile Include="427_Construct_Quad_Tree.cpp" />
+    <ClCompile Include="433_Minimum_Genetic_Mutation.cpp" />
+    <ClCompile Include="435_Non-overlapping_Intervals.cpp" />
+    <ClCompile Include="442_Find_All_Duplicates_in_an_Array.cpp" />
+    <ClCompile Include="452_Minimum_Number_of_Arrows_to_Burst_Balloons.cpp" />
+    <ClCompile Include="470_Implement_Rand10()_Using_Rand7().cpp" />
+    <ClCompile Include="938_Range_Sum_of BST.cpp" />
+    <ClCompile Include="test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="210_Course_Schedule_II.cpp" />
+    <None Include="450. Delete Node in a BST.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
