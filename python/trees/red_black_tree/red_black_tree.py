@@ -64,7 +64,37 @@ class RBTree(object):
         cur.left.is_black = True
         cur.right.is_black = True
         return cur
-
+    def adjust(self, cur):
+        """
+        :type cur:RBNode
+        :return:
+        """
+        ret = cur
+        if cur.is_black:
+            # print(cur.val)
+            if cur.left and cur.left.is_black is False:
+                if cur.left.left and cur.left.left.is_black is False:
+                    if cur.right is None or cur.right.is_black:
+                        ret = self.single_left_rotation(cur)
+                    else:
+                        ret = self.recolor(cur)
+                elif cur.left.right and cur.left.right.is_black is False:
+                    if cur.right is None or cur.right.is_black:
+                        ret = self.left_right_rotation(cur)
+                    else:
+                        ret = self.recolor(cur)
+            if cur.right and cur.right.is_black is False:
+                if cur.right.right and cur.right.right.is_black is False:
+                    if cur.left is None or cur.left.is_black:
+                        ret = self.single_right_rotation(cur)
+                    else:
+                        ret = self.recolor(cur)
+                elif cur.right.left and cur.right.left.is_black is False:
+                    if cur.left is None or cur.left.is_black:
+                        ret = self.right_left_rotation(cur)
+                    else:
+                        ret = self.recolor(cur)
+        return ret
     def insert(self, value):
         def insert_manager(r, val):
             """
@@ -72,49 +102,36 @@ class RBTree(object):
             :param val:
             :return:
             """
-            ret = r
             if r is None:
                 return RBNode(val)
             elif r.val > val:
                 r.left = insert_manager(r.left, val)
             elif r.val < val:
                 r.right = insert_manager(r.right, val)
-            if r.is_black:
-                if r.left and r.left.is_black is False:
-                    if r.left.left and r.left.left.is_black is False:
-                        if r.right is None or r.right.is_black:
-                            ret = self.single_left_rotation(r)
-                        else:
-                            ret = self.recolor(r)
-                    elif r.left.right and r.left.right.is_black is False:
-                        if r.right is None or r.right.is_black:
-                            ret = self.left_right_rotation(r)
-                        else:
-                            ret = self.recolor(r)
-                elif r.right and r.right.is_black is False:
-                    if r.right.right and r.right.right.is_black is False:
-                        if r.left is None or r.left.is_black:
-                            ret = self.single_right_rotation(r)
-                        else:
-                            ret = self.recolor(r)
-                    elif r.right.left and r.right.left.is_black is False:
-                        if r.left is None or r.left.is_black:
-                            ret = self.right_left_rotation(r)
-                        else:
-                            ret = self.recolor(r)
-            return ret
+            return self.adjust(r)
         self.root = insert_manager(self.root, value)
+        self.root.is_black = True
 
 
-
-import utils.utils_of_red_black_tree as urb
+def preorder_traverse_RBTree(root):
+    """
+    :type root:RBNode
+    :param root:
+    :return:
+    """
+    if not root:
+        return [None]
+    ret = [(root.val, root.is_black)]
+    ret.extend(preorder_traverse_RBTree(root.left))
+    ret.extend(preorder_traverse_RBTree(root.right))
+    return ret
 
 
 def main():
     rbt = RBTree()
-    for i in range(10):
+    for i in range(9):
         rbt.insert(i)
-    urb.preorder_traverse_RBTree(rbt.root)
+        print(preorder_traverse_RBTree(rbt.root))
 
 
 
