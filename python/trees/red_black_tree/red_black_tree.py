@@ -112,6 +112,27 @@ class RBTree(object):
         self.root = insert_manager(self.root, value)
         self.root.is_black = True
 
+    def remove(self, value):
+        def remove_manager(r, val):
+            if r is None:
+                return r
+            elif r.val > val:
+                r.left = remove_manager(r.left, val)
+            elif r.val < val:
+                r.right = remove_manager(r.right, val)
+            else:
+                if r.left is None:
+                    return r.right
+                if r.right is None:
+                    return r.left
+                left_max = r.left
+                while left_max.right:
+                    left_max = left_max.right
+                r.val = left_max.val
+                r.left = remove_manager(r.left, r.val)
+            return r
+        self.root = remove_manager(self.root, value)
+
 
 def preorder_traverse_RBTree(root):
     """
@@ -131,7 +152,9 @@ def main():
     rbt = RBTree()
     for i in range(9):
         rbt.insert(i)
-        print(preorder_traverse_RBTree(rbt.root))
+    print(preorder_traverse_RBTree(rbt.root))
+    rbt.remove(7)
+    print(preorder_traverse_RBTree(rbt.root))
 
 
 
