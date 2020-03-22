@@ -8,6 +8,9 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
+        if len(s) <= 1:
+            return ''
+
         def kmp(ss):
             """
             :type ss: str
@@ -23,7 +26,7 @@ class Solution(object):
                     cn += 1
                     pos += 1
                 elif cn > 0:
-                    cn = next_arr[cn]
+                    cn = next_arr[cn-1]
                 else:
                     next_arr[pos] = 0
                     pos += 1
@@ -34,6 +37,8 @@ class Solution(object):
 def main():
     s = Solution()
     print(s.longestPrefix('level'))
+    print(s.longestPrefix('bba'))
+    print(s.longestPrefix('ababab'))
 
 
 if __name__ == "__main__":
