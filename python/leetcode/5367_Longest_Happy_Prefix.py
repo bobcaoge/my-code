@@ -8,11 +8,22 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-
-        for i in range(len(s)-1, 0, -1):
-            if s.endswith(s[:i]):
-                return s[:i]
-        return ''
+        def kmp(ss):
+            next_arr = [0]*len(ss)
+            cn = 0
+            pos = 1
+            while pos < len(ss):
+                if ss[pos] == ss[cn]:
+                    next_arr[pos] = cn+1
+                    cn += 1
+                    pos += 1
+                elif cn > 0:
+                    cn = next_arr[cn]
+                else:
+                    next_arr[pos] = 0
+                    pos += 1
+            return next_arr
+        return s[:kmp(s)[-1]]
 
 
 def main():
