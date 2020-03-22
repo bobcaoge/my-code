@@ -9,7 +9,12 @@ class Solution(object):
         :rtype: str
         """
         def kmp(ss):
-            next_arr = [0]*len(ss)
+            """
+            :type ss: str
+            :return:
+            """
+            next_arr = [0]*len(ss)  # next_arr[i]表示 ss[0..i]中必须以s[0]为前缀
+                                    # 以s[i]为后缀的最大匹配长度
             cn = 0
             pos = 1
             while pos < len(ss):
