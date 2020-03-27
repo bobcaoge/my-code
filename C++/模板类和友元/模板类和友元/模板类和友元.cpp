@@ -45,6 +45,8 @@ int main(){
 	f_run(mc);
 	F_class<int> fc;
 	fc.run(mc);
+	char* p = new char[1024];
+	MyClass<int>* c = new(p) MyClass<int>(3);
 	cin.get();
 	return  0;
 }
