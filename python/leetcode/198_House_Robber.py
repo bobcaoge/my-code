@@ -21,7 +21,7 @@ class Solution:
             second = self.buffer(nums[1:], adjoin+1)
             return first if first >second else second
 
-    def rob1(self, nums):
+    def rob11(self, nums):
         return self.buffer(nums, 0)
 
     def rob1(self, nums):
@@ -50,6 +50,7 @@ class Solution:
 
 def main():
     s = Solution()
+    print(s.rob([3,6,2,7,8,1,9,9,10,2]))
 
 
 if __name__ == "__main__":
