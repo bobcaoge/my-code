@@ -10,11 +10,11 @@
 
 using namespace std;
  
-int main() {
+int main_test_() {
 	string a = "abcde";
 	cout << a.find("b") << endl;
 	cout << a.find("X") << endl;
-	cout << string('a', 1) << endl;
+	cout << string(1, 'a') << endl;
 	cin.get();
 	return 1;
 }

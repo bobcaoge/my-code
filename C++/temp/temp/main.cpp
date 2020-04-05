@@ -80,8 +80,35 @@ public:
 
 };
 int C::a = 0;
+class AAA
+{
+public:
+	virtual void fun1(){
+		cout << "fun1 A" << endl;
+	}
+	void fun2(){
+		cout << "fun2 A" << endl;
+	}
+};
+class BBB :public AAA
+{
+private:
+	void fun1(){
+		cout << "fun1 B" << endl;
+	}
+	virtual void fun2(){
+		cout << "fun2 B" << endl;
+	}
 
-int main() {
+};
+int main(){
+	AAA* a = new BBB();
+	a->fun2();
+	cin.get();
+	return 0;
+}
+
+int mainaaaaa() {
 	/*
 	complex<int> a(3);
 	print(a);*/
