@@ -51,6 +51,7 @@ class Solution:
 def main():
     s = Solution()
     print(s.rob([3,6,2,7,8,1,9,9,10,2]))
+    print(s.rob([6,7,7,6,5,6,8,7,6,5,9,10,0,10,20,6,7,6,6]))
 
 
 if __name__ == "__main__":
